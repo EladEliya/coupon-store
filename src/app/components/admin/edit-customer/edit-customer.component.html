@@ -1,0 +1,23 @@
+<h1>customer Details</h1>
+
+<h3>First name: <input [readonly]="readOnly" type="text" [(ngModel)]="customer.firstName"> </h3>
+<h3>Last name: <input [readonly]="readOnly" type="text" [(ngModel)]="customer.lastName"> </h3>
+<h3>Email: <input [readonly]="readOnly" type="text" [(ngModel)]="customer.email"></h3>
+<h3>Password: <input [readonly]="readOnly" type="text" [(ngModel)]="customer.password"></h3>
+<!-- <img src="assets/images/products/{{customer.id}}" alt="customer..."> -->
+
+<br>
+<button (click)="delete()">Delete This customer</button>
+<br>
+<input type="checkbox" [(ngModel)]="readOnly" > disable update
+<br>
+<button (click)="update()" >update This customer</button>
+
+
+<!-- public id?: number,
+public firstName?: string,
+public lastName?: string,
+public email?: string,
+public password?: string, -->
+
+[disabled]="readOnly"

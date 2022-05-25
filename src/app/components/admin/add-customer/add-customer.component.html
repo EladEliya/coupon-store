@@ -1,0 +1,39 @@
+<h2>Enter new customer details</h2>
+<br>
+
+<form action="" #formInfo="ngForm">
+
+    <input 
+    type="text" 
+    placeholder="*First Name" 
+    [(ngModel)]="customer.firstName" 
+    name="firstname"
+    [required]="false"
+#firstnameInfo="ngModel"
+    >
+    <span *ngIf="firstnameInfo.errors?.['required'] && firstnameInfo.touched">name is missing</span>
+   
+    <input 
+    type="text" 
+    placeholder="Last Name" 
+    [(ngModel)]="customer.lastName" 
+    name="last name"
+
+    >
+    
+    <input type="text" placeholder="Email of customer" [(ngModel)]="customer.email" name="email">
+    
+    <input type="text" placeholder="Password of customer" [(ngModel)]="customer.password" name="password" >
+    
+    
+    <!-- <span *ngIf="stockInfo.invalid && stockInfo.touched">stock is missing</span> -->
+    
+    <button (click)="addCustomer()" class="btn btn-success" >Add</button>
+    
+    
+</form>
+<!-- public id?: number,
+public firstName?: string,
+public lastName?: string,
+public email?: string,
+public password?: string, -->

@@ -1,0 +1,12 @@
+:host{
+    display: block;
+    border: 2px solid black;
+    padding: 20px;
+    width:  50%;
+    margin: auto;
+}
+
+  select{
+       width:fit-content;
+
+    }

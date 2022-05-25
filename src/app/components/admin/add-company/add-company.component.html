@@ -1,0 +1,26 @@
+<h2>enter new company details</h2>
+<br>
+
+<form action="">
+
+    <input 
+    type="text" 
+    placeholder="name of company" 
+    [(ngModel)]="company.name" 
+    name="name"
+
+    >
+    
+    <input type="text" placeholder="email of company" [(ngModel)]="company.email" name="email">
+    
+    <input type="text" placeholder="password of company" [(ngModel)]="company.password" name="password" >
+    
+    
+    <!-- <span *ngIf="stockInfo.invalid && stockInfo.touched">stock is missing</span> -->
+    
+    <button (click)="addCompany()" class="btn btn-success">Add</button>
+    
+    
+</form>
+    
+

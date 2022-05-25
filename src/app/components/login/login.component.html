@@ -1,0 +1,15 @@
+<input #email type="text" placeholder="email">
+<br>
+<input #password type="password" placeholder="password">
+<br>
+<!-- <input #clientType type="radio" placeholder="clientType"   > -->
+ 
+    <select #clientType  class="form-select" id="clientType">
+      <option selected>choose client type from list</option>
+      <option value="ADMINISTRATOR">ADMINISTRATOR</option>
+      <option value="COMPANY">COMPANY</option>
+      <option value="CUSTOMER">CUSTOMER</option>
+    </select>
+
+<br>
+<button type="button" class="btn btn-primary" (click)="login(email.value, password.value, clientType.value)" class="btn btn-success">Login</button>

@@ -1,0 +1,35 @@
+<p>customers-details works!</p>
+<table > 
+    <!--*ngIf="products; else loading" -->
+    <caption>All customers</caption> 
+      
+        <tr>
+            <th>id</th>
+            <th>first name</th>
+            <th>last name</th>
+            <th>email</th>
+            <th>password</th>
+            
+        </tr>
+
+        <!-- routerLink="/welcome/product-details/{{p.id}}" -->
+
+        <tr *ngFor="let p of customers" routerLink="/welcome/ADMINISTRATOR/edit-customer/{{p.id}}" >
+            <td>{{p.id}}</td>
+            <td>{{p.firstName}}</td>
+            <td>{{p.lastName}}</td>
+            <td>{{p.email}}</td>
+            <td>{{p.password}}</td>
+
+            <!-- <td><app-thumbnail imgSrc="assets/images/products/{{p.id}}"></app-thumbnail></td> -->
+        </tr>
+
+    </table>
+        
+        
+    <h1>You can edit a customer by clicking on it!</h1>
+    <!-- public id?: number,
+    public firstName?: string,
+    public lastName?: string,
+    public email?: string,
+    public password?: string, -->
